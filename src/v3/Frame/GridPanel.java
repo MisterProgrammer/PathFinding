@@ -38,36 +38,15 @@ public class GridPanel extends JPanel {
 
 	private double currentX;
 	private double currentY;
-	private int newX;
-	private int newY;
-	private double previousX;
-	private double previousY;
 	private double zoom = 1;
 
 	public GridPanel() {
-		addMouseListener(new MouseAdapter() {
-			public void mousePressed(MouseEvent e) {
-				previousX = e.getX();
-				previousY = e.getY();
-			}
-		});
-		addMouseMotionListener(new MouseMotionAdapter() {
-			public void mouseDragged(MouseEvent e) {
-
-				double newX = e.getX() - previousX;
-				double newY = e.getY() - previousY;
-
-				previousX += newX;
-				previousY += newY;
-
-				repaint();
-			}
-		});
 		addMouseWheelListener(new MouseWheelListener() {
 
 			public void mouseWheelMoved(MouseWheelEvent e) {
-				
+
 				if (e.getScrollType() == MouseWheelEvent.WHEEL_UNIT_SCROLL) {
+
 					currentX = e.getX();
 					currentY = e.getY();
 					int wheelRotation = e.getWheelRotation();
@@ -76,6 +55,7 @@ public class GridPanel extends JPanel {
 					} else {
 						incrementZoom(.2 * -(double) e.getWheelRotation());
 					}
+
 				}
 
 			}
@@ -85,9 +65,9 @@ public class GridPanel extends JPanel {
 
 	}
 
+//8,4,3.3
 	private void incrementZoom(double amount) {
-
-		zoom += amount;
+		zoom += amount * MainFrame.GRID_SIZE / 10;
 		zoom = Math.max(0.00001, zoom);
 		repaint();
 
@@ -105,11 +85,21 @@ public class GridPanel extends JPanel {
 		g2 = (Graphics2D) g;
 		AffineTransform tx = new AffineTransform();
 
-//		tx.translate(currentX, currentY);
-//		tx.scale(zoom, zoom);
-//		tx.translate(-currentX, -currentY);
-//		g2.setTransform(tx); // zoom and panning test
-
+		if (MainFrame.GRID_SIZE > 10) {
+			if (zoom >= 1) {
+				tx.translate(currentX, currentY);
+				tx.scale(zoom, zoom);
+				tx.translate(-currentX, -currentY);
+				g2.setTransform(tx); // zoom and panning test
+			} else {
+				zoom = 1;
+				repaint();
+			}
+		} else {
+			zoom = 1;
+			repaint();
+		}
+		System.out.println(zoom);
 		font = new Font("ARIAL", Font.BOLD, (int) (1.0f / SIZE * 500));
 
 		g2.setFont(font);
@@ -180,7 +170,7 @@ public class GridPanel extends JPanel {
 
 	private void drawCosts(Node node, int i, int j) {
 		// TODO Auto-generated method stub
-		if (MainFrame.GRID_SIZE <= 10) {
+		if (zoom*(1.0f/MainFrame.GRID_SIZE*100) > 15 || MainFrame.GRID_SIZE <= 10) {
 			float g = round(node.getG(), 1);
 			float h = round(node.getH(), 1);
 			float f = round(node.getF(), 1);
@@ -203,6 +193,7 @@ public class GridPanel extends JPanel {
 					i * rectSize + (rectSize - g2.getFontMetrics().stringWidth(String.valueOf(f))) / 2, j * rectSize + 1
 							+ g2.getFontMetrics().getAscent() + (rectSize - g2.getFontMetrics().getHeight()) / 1.5f);
 		}
+
 	}
 
 	public char[][] getCharGrid() {
