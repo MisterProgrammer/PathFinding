@@ -1,11 +1,10 @@
 package v3.Frame;
 
-import javax.swing.JOptionPane;
-import javax.swing.SwingWorker;
-
-import v3.Pathfinding.PathFindingAlgorithm;
 import v3.Pathfinding.Grid;
+import v3.Pathfinding.PathFindingAlgorithm;
 import v3.Pathfinding.StopWatch;
+
+import javax.swing.*;
 
 public class PathFindingWorker extends SwingWorker<Void, Void> {
 
@@ -54,7 +53,7 @@ public class PathFindingWorker extends SwingWorker<Void, Void> {
 
 		watch.stop();
 		MainFrame.running = false;
-		PathfindingMain.frame.setTitle("PathFinding v3 by André Páscoa       Elapsed Time: " + watch.getTime());
+		PathfindingMain.frame.setTitle("PathFinding v3 by Andrï¿½ Pï¿½scoa       Elapsed Time: " + watch.getTime());
 		return null;
 	}
 

@@ -1,12 +1,8 @@
 package v3.Pathfinding;
 
-import java.util.HashSet;
-import java.util.Queue;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-
 import v3.Frame.GridPanel;
+
+import java.util.*;
 
 public class PathFindingAlgorithm {
 	private Grid grid;

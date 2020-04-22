@@ -1,8 +1,8 @@
 package v3.Pathfinding;
 
 import java.util.ArrayList;
-import java.util.Stack;
 import java.util.Random;
+import java.util.Stack;
 
 public class Maze {
 

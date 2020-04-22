@@ -1,8 +1,7 @@
 package Testing;
 
-import java.awt.*;
-import java.awt.geom.AffineTransform;
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * Canvas displaying a simple drawing: the coordinate-system axes + some points

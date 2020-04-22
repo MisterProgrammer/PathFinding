@@ -1,23 +1,8 @@
 package v1;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
-import javax.swing.AbstractAction;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.KeyStroke;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
 public class Window extends JFrame implements MouseListener, MouseMotionListener {
 
@@ -212,7 +197,7 @@ public class Window extends JFrame implements MouseListener, MouseMotionListener
 		setResizable(false);
 		setFocusable(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("PathFinding by André Páscoa");
+		setTitle("PathFinding by Andrï¿½ Pï¿½scoa");
 	}
 
 	public static void main(String[] args) {

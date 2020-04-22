@@ -1,27 +1,12 @@
 package v3.Frame;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.TitledBorder;
-
 import v3.Pathfinding.PathFindingAlgorithm;
 
-import javax.swing.JComboBox;
-import java.awt.Component;
-import javax.swing.SwingWorker;
-import javax.swing.JSlider;
-import javax.swing.JSeparator;
-import java.awt.GridLayout;
-import javax.swing.JLabel;
-import java.awt.Font;
-import java.awt.event.ActionListener;
+import javax.swing.*;
+import javax.swing.border.TitledBorder;
+import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
 
@@ -41,6 +26,7 @@ public class MainFrame extends JFrame {
 	static JButton obstacleBtn;
 	static JButton waypointBtn;
 	static JCheckBox diagonalCheck;
+
 	static JCheckBox timerCheck;
 	static JPanel selectedNode;
 	static JPanel NodeEditing;
@@ -232,7 +218,7 @@ public class MainFrame extends JFrame {
 		pack();
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("PathFinding v3 by André Páscoa");
+		setTitle("PathFinding v3 by Andrï¿½ Pï¿½scoa");
 		setResizable(false);
 		setVisible(true);
 

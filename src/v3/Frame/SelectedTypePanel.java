@@ -1,13 +1,9 @@
 package v3.Frame;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-
-import javax.swing.JPanel;
-
 import v3.Pathfinding.Grid.Type;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class SelectedTypePanel extends JPanel {
 	/**

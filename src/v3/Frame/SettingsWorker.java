@@ -1,9 +1,9 @@
 package v3.Frame;
 
-import javax.swing.SwingWorker;
-
 import v3.Pathfinding.PathFindingAlgorithm.Type;
 import v3.Pathfinding.StopWatch;
+
+import javax.swing.*;
 
 public class SettingsWorker extends SwingWorker<Void, Void> {
 
@@ -119,11 +119,7 @@ public class SettingsWorker extends SwingWorker<Void, Void> {
 
 			MainFrame.lblDelay.setText("Delay: " + MainFrame.delaySlider.getValue() + " ms");
 
-			if (!MainFrame.running) {
-				MainFrame.slider.setEnabled(true);
-			} else {
-				MainFrame.slider.setEnabled(false);
-			}
+			MainFrame.slider.setEnabled(!MainFrame.running);
 			watch.stop();
 			Thread.sleep(10);
 			MainFrame.selectedNode.repaint();
