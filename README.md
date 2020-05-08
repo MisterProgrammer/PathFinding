@@ -6,18 +6,18 @@ Pathfinding program with maze generator, implements A*, Djikstra and Breadth-fir
 <img src="https://github.com/devandrepascoa/PathFinding/blob/master/docs/main.gif" width="800">
 <br>
 
-Capable of generating mazes!
+#Capable of generating mazes!
 <br>
-<img src="https://github.com/devandrepascoa/PathFinding/blob/master/docs/maze.gif" width="500">
+<img src="https://github.com/devandrepascoa/PathFinding/blob/master/docs/maze.gif" width="800">
 
-Waypoints!
+#Waypoints!
 <br>
-<img src="https://github.com/devandrepascoa/PathFinding/blob/master/docs/waypoints.gif" width="500">
+<img src="https://github.com/devandrepascoa/PathFinding/blob/master/docs/waypoints.gif" width="800">
 
-Zooming capability, that shows details about the node!
+#Zooming capability, that shows details about the node!
 <br>
-<img src="https://github.com/devandrepascoa/PathFinding/blob/master/docs/zoom.gif" width="500">
+<img src="https://github.com/devandrepascoa/PathFinding/blob/master/docs/zoom.gif" width="800">
 
-Various types of algorithms!
+#Various types of algorithms!
 <br>
-<img src="https://github.com/devandrepascoa/PathFinding/blob/master/docs/algos.gif" width="500">
+<img src="https://github.com/devandrepascoa/PathFinding/blob/master/docs/algos.gif" width="800">
