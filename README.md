@@ -3,7 +3,7 @@ Pathfinding program with maze generator, implements A*, Djikstra and Breadth-fir
 
 <br>
 <br>
-<img src="https://github.com/devandrepascoa/PathFinding/blob/master/docs/maze.gif" width="500">
+<img src="https://github.com/devandrepascoa/PathFinding/blob/master/docs/main.gif" width="500">
 <br>
 
 Capable of generating mazes!
