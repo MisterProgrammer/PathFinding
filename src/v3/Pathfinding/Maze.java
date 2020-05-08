@@ -6,9 +6,9 @@ import java.util.Stack;
 
 public class Maze {
 
-	private Stack<Node> stack;
-	private Random random;
-	private int[][] maze;
+	private final Stack<Node> stack;
+	private final Random random;
+	private final int[][] maze;
 	int size;
 
 	public Maze(int size) {

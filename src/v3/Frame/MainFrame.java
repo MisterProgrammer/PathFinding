@@ -218,7 +218,7 @@ public class MainFrame extends JFrame {
 		pack();
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("PathFinding v3 by Andr� P�scoa");
+		setTitle("PathFinding v3 by Andre Pascoa");
 		setResizable(false);
 		setVisible(true);
 
